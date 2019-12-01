@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "driverjammer", "driverjammer.csproj", "{37FCFF70-EB57-4C7C-BB54-8972F01D31E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "devjammer", "devjammer.csproj", "{37FCFF70-EB57-4C7C-BB54-8972F01D31E4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C007B58-FF05-48A8-AE30-AE338DB41E66}"
 EndProject

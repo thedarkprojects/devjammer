@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{37FCFF70-EB57-4C7C-BB54-8972F01D31E4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>driverjammer</RootNamespace>
-    <AssemblyName>driverjammer</AssemblyName>
+    <RootNamespace>devjammer</RootNamespace>
+    <AssemblyName>devjammer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
