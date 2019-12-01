@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+/driverjammer/bin/
+/driverjammer/obj/
+/driverjammer/.vs/
