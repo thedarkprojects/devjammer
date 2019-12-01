@@ -31,6 +31,6 @@
 *.out
 *.app
 
-/driverjammer/bin/
-/driverjammer/obj/
-/driverjammer/.vs/
+/bin/
+/obj/
+/.vs/
