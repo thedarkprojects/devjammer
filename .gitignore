@@ -33,4 +33,6 @@
 
 /bin/
 /obj/
+/publish/
 /.vs/
+*.user
