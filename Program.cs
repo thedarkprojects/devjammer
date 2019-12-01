@@ -1,12 +1,7 @@
 ﻿using NativeSetupDiLib;
-using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Management;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace driverjammer
 {
@@ -16,7 +11,7 @@ namespace driverjammer
         static void Main(string[] args)
         {
             String name = "USBSTOR";
-            var usbDevices = GetUSBDevices();
+            var usbDevices = GetLogicalDevices();
             foreach (var usbDevice in usbDevices)
             {
                 if (usbDevice.GetPropertyValue("DeviceID").ToString().Contains(name))
@@ -30,15 +25,15 @@ namespace driverjammer
                     // get this from the properties dialog box of this device in Device Manager
                     string instancePath = @usbDevice.GetPropertyValue("DeviceID").ToString();
 
-                    while (true) DeviceHelper.SetDeviceEnabled(mouseGuid, instancePath, true);
-                    Console.WriteLine("Done");
+                    //while (true) DeviceHelper.SetDeviceEnabled(mouseGuid, instancePath, true);
+                    //Console.WriteLine("Done");
                 }
             }
 
             Console.Read();
         }
 
-        static List<ManagementBaseObject> GetUSBDevices()
+        static List<ManagementBaseObject> GetLogicalDevices()
         {
             List<ManagementBaseObject> devices = new List<ManagementBaseObject>();
 
