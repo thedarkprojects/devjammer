@@ -10,8 +10,6 @@ using System.Threading;
 namespace devjammer
 {
     //see https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/cim-logicaldevice
-    //TODO: shell
-    //TODO: Check if run as admin
     class Program
     {
         static void Main(string[] args)
