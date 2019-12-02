@@ -17,25 +17,25 @@ namespace devjammer
             if (!IsAdministrator())
             {
                 Console.WriteLine("Error: You need to run the program as administrator");
-                Environment.Exit(1);
+                WaitForExit(1);
             }
             if (args.Length == 0)
             {
                 Console.WriteLine("Error: You need to specify an argument ");
                 Console.WriteLine(GetHelp());
-                Environment.Exit(1);
+                WaitForExit(1);
             }
             String arg = args[0].ToLower();
             String extraParam = (args.Length > 1 ? args[1].ToLower() : "");
             if (arg.Equals("help"))
             {
                 Console.WriteLine(GetHelp());
-                Environment.Exit(0);
+                WaitForExit(0);
             }
             else if (arg.Equals("list"))
             {
                 PrintAllLogicalDevice(extraParam);
-                Environment.Exit(0);
+                WaitForExit(0);
             }
             else if (arg.Equals("enable") || arg.Equals("disable") || arg.Equals("jam") || arg.Equals("xjam"))
             {
@@ -177,6 +177,14 @@ namespace devjammer
 
                 }
             }
+            WaitForExit(0);
+        }
+
+        static void WaitForExit(int exitCode)
+        {
+            Console.Write("Press any key to close...");
+            Console.ReadKey();
+            Environment.Exit(exitCode);
         }
 
         static void PrintAllLogicalDevice(String extraParam)
