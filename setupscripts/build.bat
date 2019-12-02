@@ -72,10 +72,12 @@ exit /b 0
 		if !ISCC_FOLDER!==close (goto:end_program)
 		SET PATH=!PATH!;!ISCC_FOLDER!
 		call:build_exe_installer
+		exit /b 0
 	)
 	iscc.exe ./devjammer_!ARC!.iss 
 
 	goto:end_program
+	exit /b 0
 
 :build_zip_archive
 	SET FOUND_ZIPPER=false
@@ -85,11 +87,13 @@ exit /b 0
 		if !ZIPPER_FOLDER!==close (goto:end_program)
 		SET PATH=!PATH!;!ZIPPER_FOLDER!
 		call:build_zip_archive
+		exit /b 0
 	)
 	if not exist ".\build\" (mkdir .\build\)
 	call zip.bat .\build\devjammer-!VERSION!-!ARC!.zip ..\bin\!ARC!\Release\devjammer.exe .\..\README.MD ..\LICENSE
 	
 	goto:end_program
+	exit /b 0
 
 :help
 	echo Usage: build.bat [BUILD_TYPE] [ARC]
