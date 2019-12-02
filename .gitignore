@@ -34,5 +34,6 @@
 /bin/
 /obj/
 /publish/
+/setupscripts/build/
 /.vs/
 *.user
