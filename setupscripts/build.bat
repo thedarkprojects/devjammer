@@ -85,7 +85,7 @@ exit /b 0
 		SET PATH=!PATH!;!ZIPPER_FOLDER!
 		call:build_zip_archive
 	)
-	call zip.bat .\build\devjammer-!ARC!.zip .\..\README.MD ..\LICENSE
+	call zip.bat .\build\devjammer-!ARC!.zip ..\bin\!ARC!\Release\devjammer.exe .\..\README.MD ..\LICENSE
 	
 	goto:end_program
 
