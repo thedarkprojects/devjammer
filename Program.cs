@@ -9,6 +9,8 @@ using System.Threading;
 namespace devjammer
 {
     //see https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/cim-logicaldevice
+    //TODO: shell
+    //TODO: Check if run as admin
     class Program
     {
         static void Main(string[] args)
@@ -132,13 +134,13 @@ namespace devjammer
                                     {
                                         foreach (var drive in DriveInfo.GetDrives())
                                         {
-                                            drives.Add(driveRoot);
-                                            if (!drives.Contains(driveRoot))
+                                            if (!drives.Contains(drive.RootDirectory.ToString()))
                                             {
-                                                driveRoot = drive.RootDirectory.ToString();
+                                                driveRoot = drive.RootDirectory.Name.Substring(0,2) ;
                                             }
+                                            drives.Add(drive.RootDirectory.ToString());
                                         }
-                                        if (currentSize < drives.Count)
+                                        if (currentSize < drives.Count && currentSize > 0)
                                         {
                                             break;
                                         }
