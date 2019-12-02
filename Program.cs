@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Management;
+using System.Security.Principal;
 using System.Threading;
 
 namespace devjammer
@@ -15,6 +16,11 @@ namespace devjammer
     {
         static void Main(string[] args)
         {
+            if (!IsAdministrator())
+            {
+                Console.WriteLine("Error: You need to run the program as administrator");
+                Environment.Exit(1);
+            }
             if (args.Length == 0)
             {
                 Console.WriteLine("Error: You need to specify an argument ");
@@ -226,6 +232,11 @@ namespace devjammer
                 "\ndisable   disable a device that match the second argument" +
                 "\njam       keep enabling a device until system deny access(shady)" +
                 "\nxjam      enable a device then keep the drive alive with cmd(shady)";
+        }
+
+        public static bool IsAdministrator()
+        {
+            return (new WindowsPrincipal(WindowsIdentity.GetCurrent())).IsInRole(WindowsBuiltInRole.Administrator);
         }
 
     }
