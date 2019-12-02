@@ -1,4 +1,5 @@
 
+pronouced divjammer 
 driverjammer list "WD Elements"
 
 if it failing try use the caption name of the device you can execute the command below 
