@@ -11,3 +11,5 @@ devjammer list
 
 if it does not print anything that means the device you are trying to jam 
 is already enabled for the session
+
+xjam open in in invisible cmd 
