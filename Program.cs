@@ -1,6 +1,8 @@
 ﻿using NativeSetupDiLib;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Management;
 using System.Threading;
 
@@ -29,7 +31,7 @@ namespace devjammer
                 PrintAllLogicalDevice(extraParam);
                 Environment.Exit(0);
             }
-            else if (arg.Equals("enable") || arg.Equals("disable") || arg.Equals("jam"))
+            else if (arg.Equals("enable") || arg.Equals("disable") || arg.Equals("jam") || arg.Equals("xjam"))
             {
 
             }
@@ -109,6 +111,56 @@ namespace devjammer
                                 Console.WriteLine(ex);
                             }
                         }
+                        else if (arg.Equals("xjam"))
+                        {
+                            if (usbDevice.GetPropertyValue("Status").ToString().ToUpper().Equals("OK"))
+                            {
+                                continue;
+                            }
+                            try
+                            {
+                                Thread thread1 = new Thread(delegate ()
+                                {
+                                    DeviceHelper.SetDeviceEnabled(mouseGuid, instancePath, true);
+                                });
+                                Thread thread2 = new Thread(delegate ()
+                                {
+                                    String driveRoot = "E:";
+                                    HashSet<String> drives = new HashSet<String>();
+                                    int currentSize = 0;
+                                    do
+                                    {
+                                        foreach (var drive in DriveInfo.GetDrives())
+                                        {
+                                            drives.Add(driveRoot);
+                                            if (!drives.Contains(driveRoot))
+                                            {
+                                                driveRoot = drive.RootDirectory.ToString();
+                                            }
+                                        }
+                                        if (currentSize < drives.Count)
+                                        {
+                                            break;
+                                        }
+                                        currentSize = drives.Count;
+                                    } while (true);
+                                    Process process = new Process();
+                                    process.StartInfo.FileName = "cmd.exe";
+                                    process.StartInfo.Arguments = "/k " + driveRoot;
+                                    process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                                    process.Start();
+                                });
+                                thread2.Start();
+                                thread1.Start();
+                                thread2.Join();
+                                thread1.Join();
+
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine(ex);
+                            }
+                        }
                         Console.WriteLine("{0}ed {1}-{2}",
                            arg,
                            usbDevice.GetPropertyValue("Caption"),
@@ -170,7 +222,8 @@ namespace devjammer
                 "\nlist      list all devices" +
                 "\nenable    enable a device that match the second argument" +
                 "\ndisable   disable a device that match the second argument" +
-                "\njam       keep enabling a device until system deny access(shady)";
+                "\njam       keep enabling a device until system deny access(shady)" +
+                "\nxjam      enable a device then keep the drive alive with cmd(shady)";
         }
 
     }
