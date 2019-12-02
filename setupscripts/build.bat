@@ -3,6 +3,7 @@ cls
 
 setlocal enabledelayedexpansion
 
+SET VERSION=1.0
 SET SCRIPT_DIR=%~dp0
 SET WORKING_DIR=%cd%
 SET BUILD_TYPE=
@@ -86,7 +87,7 @@ exit /b 0
 		call:build_zip_archive
 	)
 	if not exist ".\build\" (mkdir .\build\)
-	call zip.bat .\build\devjammer-!ARC!.zip ..\bin\!ARC!\Release\devjammer.exe .\..\README.MD ..\LICENSE
+	call zip.bat .\build\devjammer-!VERSION!-!ARC!.zip ..\bin\!ARC!\Release\devjammer.exe .\..\README.MD ..\LICENSE
 	
 	goto:end_program
 
