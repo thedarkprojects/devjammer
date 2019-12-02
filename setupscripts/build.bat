@@ -44,7 +44,7 @@ cd !SCRIPT_DIR!
 
 if "!BUILD_TYPE!"=="" (
 	echo Error: you need to specify the build type (exe or zip^)
-	SET BUILD_TYPE=exe
+	SET BUILD_TYPE=help
 )
 
 if "!BUILD_TYPE!"=="help" (
@@ -85,6 +85,7 @@ exit /b 0
 		SET PATH=!PATH!;!ZIPPER_FOLDER!
 		call:build_zip_archive
 	)
+	if not exist ".\build\" (mkdir .\build\)
 	call zip.bat .\build\devjammer-!ARC!.zip ..\bin\!ARC!\Release\devjammer.exe .\..\README.MD ..\LICENSE
 	
 	goto:end_program
