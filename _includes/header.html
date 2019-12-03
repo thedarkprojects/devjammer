@@ -1,0 +1,34 @@
+<header>
+  <div class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></div>
+  <nav>
+    {% assign categories = "Main Menu" | split: ", " %}
+    {% for category in categories %}
+      <div class="category">{{ category }}</div>
+      <ul>
+      {% assign items = site.devjammer | where: "category", category | sort: "order" %}
+      {% for item in items %}
+        <li><a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
+      {% endfor %}
+      </ul>
+    {% endfor %}
+    {% for my_page in site.pages %}
+      <div class="category"><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></div>
+    {% endfor %}
+	
+	<div class="category">Extenal</div>
+	  <ul>
+	    {% for item in site.external_links %}
+	      <li><a href="{{ item.href }}">{{ item.title }}</a></li>
+	    {% endfor %}
+	  </ul>
+	</div>
+	
+	<div class="category">Social</div>
+	  <ul>
+	    {% for item in site.social_media %}
+	      <li><a href="{{ item.href }}">{{ item.title }}</a></li>
+	    {% endfor %}
+	  </ul>
+	</div>
+  </nav>
+</header>

@@ -1,0 +1,55 @@
+# This config file is meant for site and build settings affecting the entire blog, values that are rarely edited.
+# Change are not reflected automatically and `jekyl serve` has to be restarted manually.
+
+# Site settings
+# Custom key-value pairs can be specified here as well, e.g. email: example@example.com, twitter_username: example, etc.
+# For multiline values (with line breaks) prepend  `> `, e.g. description: > …
+title: DevJammer
+description: 2019 DevJammer Azeez Adewale # appears in head meta (for search engines) and in the feed.xml site description.
+baseurl: "/devjammer" # the subpath of your site, e.g. /blog (forward slash prefix required)
+url: "https://thedarkprojects.github.io" # the base url for your site, e.g. http://example.com
+permalink: /:path # use filename as URL for posts, e.g. 2010-01-01-foo.md -> example.com/foo (also for pages)
+
+collections:
+  devjammer:
+    output: true
+    permalink: /:path
+
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: page
+
+# Build settings
+markdown: kramdown
+
+social_media:
+  - id: 'iamthecarisma'
+    href: 'https://www.twitter.com/iamthecarisma'
+    title: 'Twitter'
+    
+  - id: 'devjammer'
+    href: 'https://github.com/thedarkprojects/devjammer'
+    title: 'Github'
+    
+  - id: 'azeez-adewale'
+    href: 'https://www.linkedin.com/in/azeez-adewale/'
+    title: 'Linkedin'
+    
+external_links:
+    - name: Cronux
+      href: https://thecarisma.github.io/Cronux/
+      title: Cronux
+
+# For a poor man's static archival deployment with relative links,
+# change baseurl to ".", uncomment permalink, and suffix collections > devjammer > permalink with ".html".
+# Note that in-article relative links won't work and videos won't properly embed when opening via "file:///.
+
+# Example of an FTP deployment (copy generated files in _site/ to public_html/devjammer):
+# baseurl: "/~schaad/devjammer"
+# url: "http://web.media.mit.edu"
+
+# Example of a GH Pages deployment (sources pushed to repo "devjammer", branch "gh-pages"):
+# baseurl: "/devjammer"
+# url: "https://thedarkprojects.github.io"

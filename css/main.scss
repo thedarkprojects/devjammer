@@ -1,0 +1,196 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@mixin rotate($deg, $origin) {
+  /* CW orientation */
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+
+  /* top left */
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+$body-width: 860px;
+$page-content-margin-left: 220px;
+$text-color: #007324;
+$gray-color: #bbb;
+$small-size: 10px;
+$normal-size: 12px;
+$medium-size: 16px;
+$big-size: 28px;
+
+/* Type weight 100-900 in 100 increments; Medium is 500: http://www.webtype.com/info/articles/fonts-weights/ */
+
+html {
+  min-width: 1000px;
+  background-color: black;
+}
+
+body {
+  width: $body-width;
+  margin: 40px auto 80px 40px;
+  position: relative;
+
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: $normal-size;
+  color: $text-color;
+  line-height: 1.6;
+}
+
+a {
+  color: $text-color
+}
+
+.category, .title {
+  font-weight: bold;
+}
+
+header {
+  .site-title {
+    font-size: $big-size;
+    letter-spacing: 1px;
+    line-height: 1;
+    a {
+      text-decoration: none;
+    }
+    margin-bottom: 40px;
+  }
+
+  nav {
+    float: left;
+    max-width: 200px;
+
+    line-height: 1.8;
+
+    ul {
+      margin: 0 0 20px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.grid {
+  text-align: justify;
+}
+
+.page-content {
+  margin-left: $page-content-margin-left;
+
+  .category {
+    font-size: $medium-size;
+    margin: 30px 0 30px 0;
+    width: 100%;
+  }
+  .category:first-child {
+    margin: 0 0 30px 0;
+  }
+
+  .tile, .tile-wide {
+    display: inline-block;
+    margin: 0px 0 30px 0;
+    text-align: center;
+    a {
+      text-decoration: none;
+    }
+    .title {
+      font-weight: bold;
+      margin: 6px 0 4px 0;
+    }
+    .tags {
+      color: $gray-color;
+    }
+  }
+  .tile {
+    width: 300px;
+  }
+  .tile-wide {
+    width: 100%;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+footer {
+  margin-left: $page-content-margin-left;
+  max-width: $body-width - $page-content-margin-left;
+
+  .year {
+    margin: 30px 0 0 0;
+    color: $gray-color;
+  }
+
+  .overview {
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin: 60px 0 60px 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+#announcement {
+  width: 220px;
+  height: 220px;
+  position: fixed;
+  top: -56.56854248px; // height * sqrt(2) / 2
+  right: -56.56854248px;
+  color: black;
+
+  #ribbon {
+    @include rotate(45deg, 0% 0%);
+    width: 311.12698364px; // width * sqrt(2)
+    height: 80px;
+    background-color: #007324;
+    text-align: center;
+
+    h1 {
+      margin: 0;
+      padding: 12px 0 3px 0;
+      font-size: $medium-size;
+      letter-spacing: -0.5px;
+      color: black;
+    }
+
+    div, a {
+      color: black;
+      font-weight: 500;
+      font-size: $small-size;
+    }
+
+    div {
+      padding: 0 50px 0 50px;
+      line-height: 1.1;
+    }
+  }
+}
+
+.social-media {
+	text-align:center;
+}
+
+.social-media a {
+	padding-left:10px;
+}
