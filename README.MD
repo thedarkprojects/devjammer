@@ -2,7 +2,7 @@
 
 # <p style="text-align: center;" align="center"><img src="https://thedarkprojects.github.io/devjammer/favicon.png" alt="devjammer" style="width:180px;height:160px;" width="180" height="160" /><br /> devjammer</p>
 
-<span style="display:block;text-align:center"> ![GitHub repo size](https://img.shields.io/github/repo-size/thedarkprojects/devjammer)	![GitHub contributors](https://img.shields.io/github/contributors/thedarkprojects/devjammer) [![Twitter Follow](https://img.shields.io/twitter/follow/iamthecarisma?style=social)](https://twitter.com/iamthecarisma) [![Support on Patreon](https://img.shields.io/static/v1?label=Support%20on%20Patreon&message=$5&color=brightgreen)](https://www.patreon.com/join/thecarisma/checkout?rid=3556842)</span>
+---
 
 <p style="text-align: center;" align="center">Regain device access if denied/disabled by other programs (esp. device control programs, ransomware)</p>
 
