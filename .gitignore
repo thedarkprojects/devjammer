@@ -1,8 +1,4 @@
 
-*.vcproj    text eol=crlf
-*.sln       text eol=crlf
-*.bat       text eol=crlf
-*.cs        text eol=crlf
 
 # Prerequisites
 *.d
