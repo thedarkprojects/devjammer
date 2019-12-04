@@ -5,7 +5,7 @@
 # Custom key-value pairs can be specified here as well, e.g. email: example@example.com, twitter_username: example, etc.
 # For multiline values (with line breaks) prepend  `> `, e.g. description: > …
 title: DevJammer
-description: 2019 DevJammer Azeez Adewale # appears in head meta (for search engines) and in the feed.xml site description.
+description: 2019 DevJammer Thecarisma # appears in head meta (for search engines) and in the feed.xml site description.
 baseurl: "/devjammer" # the subpath of your site, e.g. /blog (forward slash prefix required)
 url: "https://thedarkprojects.github.io" # the base url for your site, e.g. http://example.com
 permalink: /:path # use filename as URL for posts, e.g. 2010-01-01-foo.md -> example.com/foo (also for pages)
@@ -40,10 +40,6 @@ social_media:
   - id: 'devjammer'
     href: 'https://github.com/thedarkprojects/devjammer'
     title: 'Github'
-    
-  - id: 'azeez-adewale'
-    href: 'https://www.linkedin.com/in/azeez-adewale/'
-    title: 'Linkedin'
     
 external_links:
     - name: Cronux

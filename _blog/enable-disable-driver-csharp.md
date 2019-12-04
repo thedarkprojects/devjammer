@@ -180,7 +180,7 @@ The `ManagementObjectSearcher` query can be used to get pretty much any or all t
 
 If you are choosing to perform the device enabling and disabling from command line by writing a system script (batch/powershell) you can check out the [`devcon tool`](https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/devcon) provided by Microsoft which also uses the [`SETUP APIs`](https://docs.microsoft.com/en-us/windows/win32/api/setupapi/). For the devcon program to work ensure you download the CPU architecture version for your system e.g. **devcon-x64** if your PC is 64bit.
  
-
+___
 <ul>
 {% for link in page.links %}
   <li>{{ link | markdownify | remove: "<p>" | remove: "</p>" }}</li>

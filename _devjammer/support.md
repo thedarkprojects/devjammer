@@ -1,9 +1,9 @@
 ---
 title: Support
 category: Main Menu
-order: 4
+order: 5
 tags: [Source, Open, Africa, Devcareer]
-years: 2019–present
+years: 2019
 tile-header: front_image.png
 tile: front_image.png
 links:
@@ -23,6 +23,8 @@ You can support some of this community as they make big impact in the developeme
 Or you can support me to continue making awesome open source projects > [https://patreon.com/thecarisma](https://patreon.com/thecarisma) Thanks!🤗
 
 **You can make big difference**.
+
+___
 <ul>
 {% for link in page.links %}
   <li>{{ link | markdownify | remove: "<p>" | remove: "</p>" }}</li>
