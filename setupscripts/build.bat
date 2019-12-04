@@ -22,11 +22,17 @@ for %%x in (%*) do (
 	if "%%x"=="exe" (
 		SET BUILD_TYPE=exe
 	)
+	if "%%x"=="portable" (
+		SET BUILD_TYPE=portable
+	)
 	if "%%x"=="z" (
 		SET BUILD_TYPE=zip
 	)
 	if "%%x"=="x" (
 		SET BUILD_TYPE=exe
+	)
+	if "%%x"=="p" (
+		SET BUILD_TYPE=
 	)
 	if "%%x"=="86" (
 		SET ARC=x86
@@ -58,6 +64,10 @@ if "!BUILD_TYPE!"=="exe" (
 
 if "!BUILD_TYPE!"=="zip" (
 	call:build_zip_archive
+)
+
+if "!BUILD_TYPE!"=="portable" (
+	call:build_portable
 )
 
 :end_program
@@ -95,14 +105,23 @@ exit /b 0
 	goto:end_program
 	exit /b 0
 
+
+:build_portable
+	if not exist ".\build\" (mkdir .\build\)
+	copy ..\bin\!ARC!\Release\devjammer.exe .\build\devjammer-!ARC!.exe
+	
+	goto:end_program
+	exit /b 0
+
 :help
 	echo Usage: build.bat [BUILD_TYPE] [ARC]
 	echo [BUILD_TYPE]
-	echo 	z zip    build a distributable zip arcive
-	echo 	x exe    build a executable installer (Inno Setup Required)
-	echo 	h help   print this help message
+	echo 	z zip        build a distributable zip arcive
+	echo 	x exe        build a executable installer (Inno Setup Required)
+	echo 	p portable   build a single portable executable
+	echo 	h help       print this help message
 	echo [ARC]
-	echo 	86 x32   build 32 bit distributable package
-	echo 	64 x64   build 64 bit distributable package 
+	echo 	86 x32       build 32 bit distributable package
+	echo 	64 x64       build 64 bit distributable package 
 	
 	exit /b 0

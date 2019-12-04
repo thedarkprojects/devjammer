@@ -234,7 +234,7 @@ namespace devjammer
 
         static String GetHelp()
         {
-            return "devjammer [[help],[list],[enable],[disable],[jam]] \"device part\"" +
+            return "devjammer [[help],[list],[enable],[disable],[jam]] \"device name part\"" +
                 "\ndevjammer list \"WD Elements\"" +
                 "\n" +
                 "\nhelp      show this help message" +
