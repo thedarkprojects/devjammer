@@ -33,6 +33,7 @@
 *.out
 *.app
 
+/_site/
 /bin/
 /obj/
 /publish/
