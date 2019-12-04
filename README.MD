@@ -2,8 +2,6 @@
 
 # <p style="text-align: center;" align="center"><img src="https://thedarkprojects.github.io/devjammer/favicon.png" alt="devjammer" style="width:180px;height:160px;" width="180" height="160" /><br /> devjammer</p>
 
----
-
 <p style="text-align: center;" align="center">Regain device access if denied/disabled by other programs (esp. device control programs, ransomware)</p>
 
 ---
