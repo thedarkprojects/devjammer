@@ -1,11 +1,15 @@
 <header>
   <div class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></div>
   <nav>
-    {% assign categories = "Main Menu" | split: ", " %}
+    {% assign categories = "Main Menu, Blog" | split: ", " %}
     {% for category in categories %}
       <div class="category">{{ category }}</div>
       <ul>
       {% assign items = site.devjammer | where: "category", category | sort: "order" %}
+	  {% if items.first %}
+	  {% else %}
+	  {% assign items = site.blog | where: "category", category | sort: "order" %}
+	  {% endif %}
       {% for item in items %}
         <li><a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
       {% endfor %}

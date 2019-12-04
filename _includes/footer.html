@@ -3,10 +3,12 @@
   <div class="year">{{ page.years }}&emsp;Filed under {% for tag in page.tags %}{{ tag }}{% if forloop.last == false %}, {% endif %}{% endfor %}</div>
   <a class="overview" href="{{ site.baseurl }}/">back to overview</a>
 {% endif %}
+
 <div class="social-media">
   {% for link in site.social_media %}
 	<a class="{{ current }}" href="{{ link.href }}">{{ link.title }}</a>
   {% endfor %}
+  <br /> <a href="https://thedarkprojects.github.io/">This program is part of the dark projects</a> 
 </div>
 </ul>
 </footer>
