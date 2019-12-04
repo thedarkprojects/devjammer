@@ -13,7 +13,7 @@ program in place that block access to USB port this util can be used to bypass i
 You first need to download the executable at the [download](./download.html) page then head to the [documentation](./documentation.html) page for instructions on how to 
 use the commands. Or you can choose to compile and run from source which can be found [here](https://github.com/thedarkprojects/devjammer).
 
-## Are the binary Safe
+## Are the binary Safe?
 
 Yes the binary are save to download, the application has been tested on various systems that have anti-virus programs 
 running with no issue. If you want to be sure you on the safe side you can download the source [here](https://github.com/thedarkprojects/devjammer), 

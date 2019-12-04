@@ -111,6 +111,14 @@ To view all available command from the command line, use the `help` command
 devjammer help
 ```
 
+## Generate Installer and Archive 
+
+Use the [`build.bat`](https://github.com/thedarkprojects/devjammer/blob/master/setupscripts/build.bat) script in the folder [setupscripts](https://github.com/thedarkprojects/devjammer/tree/master/setupscripts) to generate 
+the installer or zip archive. You must have inno Setup script and Cronux installed on your system.
+
+ - You can download Inno Setup from [here](http://www.jrsoftware.org/isinfo.php)
+ - You can download Cronux from [here](https://thecarisma.github.io/Cronux/)
+
 ---
 <ul>
 {% for link in page.links %}

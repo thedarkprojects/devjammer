@@ -10,6 +10,8 @@ links:
   
 ---
 
+{% assign version = 1.0 %}
+
 ## System Requirements
 
 Windows Vista or later, Ensure you download the executable according to your system 
@@ -23,22 +25,22 @@ which also comes with an uninstaller to remove the application from your system 
 environment path. Download the portable version for a quick run e.g. to execute from a shared 
 network folder or from a USB drive. 
 
-## Latest Version 1.0
+## Latest Version {{ version }}
 
 #### Installer
 
- - [devjammer-1.0-x64.exe]()
- - [devjammer-1.0-x86.exe]()
+ - [devjammer-{{ version }}-x64.exe](https://github.com/thedarkprojects/devjammer/releases/download/{{ version }}/devjammer-{{ version }}-x64.exe)
+ - [devjammer-{{ version }}-x86.exe](https://github.com/thedarkprojects/devjammer/releases/download/{{ version }}/devjammer-{{ version }}-x86.exe)
  
 #### Portable
 
- - [devjammer-x64.exe]()
- - [devjammer-x86.exe]()
+ - [devjammer-x64.exe](https://github.com/thedarkprojects/devjammer/releases/download/{{ version }}/devjammer-x64.exe)
+ - [devjammer-x86.exe](https://github.com/thedarkprojects/devjammer/releases/download/{{ version }}/devjammer-x86.exe)
  
 #### Archive
 
- - [devjammer-1.0-x64.zip]()
- - [devjammer-1.0-x86.zip]()
+ - [devjammer-{{ version }}-x64.zip](https://github.com/thedarkprojects/devjammer/releases/download/{{ version }}/devjammer-{{ version }}-x64.zip)
+ - [devjammer-{{ version }}-x86.zip](https://github.com/thedarkprojects/devjammer/releases/download/{{ version }}/devjammer-{{ version }}-x86.zip)
 
 ## Other versions 
 

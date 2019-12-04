@@ -1,2 +1,9 @@
 # Jekyll generated static files
 _site/
+
+*.exe
+
+setupscripts/build/
+bin/
+.vs/
+obj/
