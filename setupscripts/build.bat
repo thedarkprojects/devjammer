@@ -49,6 +49,7 @@ for %%x in (%*) do (
 )
 cd !SCRIPT_DIR!
 
+
 if "!BUILD_TYPE!"=="" (
 	echo Error: you need to specify the build type (exe or zip^)
 	SET BUILD_TYPE=help
