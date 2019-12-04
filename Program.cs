@@ -39,7 +39,12 @@ namespace devjammer
             }
             else if (arg.Equals("enable") || arg.Equals("disable") || arg.Equals("jam") || arg.Equals("xjam"))
             {
-
+                if (extraParam.Equals(""))
+                {
+                    Console.WriteLine("Error: second argument is required");
+                    Console.WriteLine(GetHelp());
+                    Environment.Exit(1);
+                }
             }
             else
             {
