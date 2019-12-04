@@ -1,0 +1,94 @@
+/* GitHub style for Pygments syntax highlighter, for use with Jekyll Courtesy of GitHub.com   src: https://github.com/aahan/pygments-github-style */
+.highlight pre, pre { background-color: #f8f8f8; border: 1px solid #ccc; padding: 6px 10px; border-radius: 3px; }
+
+.highlight .hll { background-color: #f8f8f8; border: 1px solid #ccc; padding: 6px 10px; border-radius: 3px; }
+.highlight .c { color: #999988; font-style: italic; }
+.highlight .err { color: #a61717; background-color: #e3d2d2; }
+.highlight .k, .highlight .o { font-weight: bold; }
+.highlight .cm { color: #999988; font-style: italic; }
+.highlight .cp { color: #999999; font-weight: bold; }
+.highlight .c1 { color: #999988; font-style: italic; }
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic; }
+.highlight .gd { color: #000000; background-color: #ffdddd; }
+.highlight .gd .x { color: #000000; background-color: #ffaaaa; }
+.highlight .ge { font-style: italic; }
+.highlight .gr { color: #aa0000; }
+.highlight .gh { color: #999999; }
+.highlight .gi { color: #000000; background-color: #ddffdd; }
+.highlight .gi .x { color: #000000; background-color: #aaffaa; }
+.highlight .go { color: #888888; }
+.highlight .gp { color: #555555; }
+.highlight .gs { font-weight: bold; }
+.highlight .gu { color: #800080; font-weight: bold; }
+.highlight .gt { color: #aa0000; }
+.highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr { font-weight: bold; }
+.highlight .kt { color: #445588; font-weight: bold; }
+.highlight .m { color: #009999; }
+.highlight .s { color: #dd1144; }
+.highlight .n { color: #333333; }
+.highlight .na { color: teal; }
+.highlight .nb { color: #0086b3; }
+.highlight .nc { color: #445588; font-weight: bold; }
+.highlight .no { color: teal; }
+.highlight .ni { color: purple; }
+.highlight .ne, .highlight .nf { color: #990000; font-weight: bold; }
+.highlight .nn { color: #555555; }
+.highlight .nt { color: navy; }
+.highlight .nv { color: teal; }
+.highlight .ow { font-weight: bold; }
+.highlight .w { color: #bbbbbb; }
+.highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo { color: #009999; }
+.highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx { color: #dd1144; }
+.highlight .sr { color: #009926; }
+.highlight .s1 { color: #dd1144; }
+.highlight .ss { color: #990073; }
+.highlight .bp { color: #999999; }
+.highlight .vc, .highlight .vg, .highlight .vi { color: teal; }
+.highlight .il { color: #009999; }
+.highlight .gc { color: #999; background-color: #EAF2F5; }
+
+/* Type weight 100-900 in 100 increments; Medium is 500: http://www.webtype.com/info/articles/fonts-weights/ */
+html { min-width: 1000px; background-color: black; }
+
+body { width: 860px; margin: 40px auto 80px 40px; position: relative; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #007324; line-height: 1.6; }
+
+a { color: #007324; }
+
+.category, .title { font-weight: bold; }
+
+header .site-title { font-size: 28px; letter-spacing: 1px; line-height: 1; margin-bottom: 40px; }
+header .site-title a { text-decoration: none; }
+header nav { float: left; max-width: 200px; line-height: 1.8; }
+header nav ul { margin: 0 0 20px 0; padding: 0; list-style: none; }
+header nav a { text-decoration: none; }
+
+.grid { text-align: justify; }
+
+.page-content { margin-left: 220px; }
+.page-content .category { font-size: 16px; margin: 30px 0 30px 0; width: 100%; }
+.page-content .category:first-child { margin: 0 0 30px 0; }
+.page-content .tile, .page-content .tile-wide { display: inline-block; margin: 0px 0 30px 0; text-align: center; }
+.page-content .tile a, .page-content .tile-wide a { text-decoration: none; }
+.page-content .tile .title, .page-content .tile-wide .title { font-weight: bold; margin: 6px 0 4px 0; }
+.page-content .tile .tags, .page-content .tile-wide .tags { color: #bbb; }
+.page-content .tile { width: 300px; }
+.page-content .tile-wide { width: 100%; }
+.page-content ul { margin: 0; padding: 0; list-style: none; }
+
+footer { margin-left: 220px; max-width: 640px; }
+footer .year { margin: 30px 0 0 0; color: #bbb; }
+footer .overview { font-weight: bold; text-decoration: none; display: inline-block; margin: 60px 0 60px 0; text-align: center; width: 100%; }
+
+img { max-width: 100%; }
+
+#announcement { width: 220px; height: 220px; position: fixed; top: -56.56854248px; right: -56.56854248px; color: black; }
+#announcement #ribbon { /* CW orientation */ -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); /* top left */ -webkit-transform-origin: 0% 0%; -moz-transform-origin: 0% 0%; -ms-transform-origin: 0% 0%; -o-transform-origin: 0% 0%; transform-origin: 0% 0%; width: 311.12698364px; height: 80px; background-color: #007324; text-align: center; }
+#announcement #ribbon h1 { margin: 0; padding: 12px 0 3px 0; font-size: 16px; letter-spacing: -0.5px; color: black; }
+#announcement #ribbon div, #announcement #ribbon a { color: black; font-weight: 500; font-size: 10px; }
+#announcement #ribbon div { padding: 0 50px 0 50px; line-height: 1.1; }
+
+.social-media { text-align: center; }
+
+.social-media a { padding-left: 10px; }
+
+pre { overflow-x: auto; }
