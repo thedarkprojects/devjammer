@@ -40,7 +40,7 @@ xjam      enable a device then keep the drive alive with cmd(shady)
 
 Before you begin contribution please read the contribution guide at [CONTRIBUTING GUIDE](https://thedarkprojects.github.io/devjammer/contribute)
 
-You can open issue or file a request that only address problems in this implementation on this repo, if the issue address the concepts of the package then create an issue or rfc [here](https://github.com/thedarkprojects/devjammer/issues)
+You can create an issue [here](https://github.com/thedarkprojects/devjammer/issues). 
 
 ## License
 
