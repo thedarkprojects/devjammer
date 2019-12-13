@@ -3,7 +3,7 @@
 
 #define MyAppName "devjammer"
 #define MyAppVersion "1.0"
-#define MyAppPublisher "Azeez Adewale"
+#define MyAppPublisher "Adewale Azeez"
 #define MyAppURL "https://thedarkprojects.github.io/devjammer/"
 #define MyAppExeName "devjammer.exe"
 
